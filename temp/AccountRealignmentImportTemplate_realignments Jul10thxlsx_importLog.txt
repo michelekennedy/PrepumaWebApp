@@ -1,0 +1,10 @@
+1:52 PM:  Realignment Import File:  Template_realignments Jul10th.xlsx
+1:52 PM:  --- UPLOAD FILES ---
+1:52 PM:  Uploaded Relalignment File:  C:\PIDevelopmentArea2017\PrepumaWebApp\temp\Template_realignments Jul10th.xlsx
+1:52 PM:  --- VALIDATE DATA TYPES ---
+1:52 PM:  Data File Data Validated
+1:52 PM:  --- CLEAR IMPORT TABLE ---
+1:52 PM:  Realignment Import SQL Table Cleared
+1:52 PM:  --- BEGIN DATA IMPORT ---
+1:52 PM:  Data Uploaded into Realignment Import SQL Table
+1:52 PM:  New Account Number C46 Not the Same as Old Account Number  Invalid Region found in newBranch column: TJ Poisl  Invalid LocalSRID found in oldLocalSRID column: VIDEOJET TECHNOLOGIES  Invalid StrategicSRID found in oldStrategicSRID column: 7318619  Invalid StrategicSRID found in newStrategicSRID column: Andrew Paff

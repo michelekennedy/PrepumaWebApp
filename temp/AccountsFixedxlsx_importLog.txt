@@ -1,0 +1,6 @@
+3:07 PM:  File AccountsFixed.xlsx Selected.
+3:07 PM:  Import File Validated.
+3:07 PM:  Account Import SQL File Cleared.
+3:07 PM:  Excel File Parsed.
+3:07 PM:  Data Imported into tblAccountImport SQL Table.
+3:07 PM: 7  Invalid Accounts Found.

@@ -1,0 +1,7 @@
+2:19 PM:  File SAPImport_11-7-2018.xlsx Selected.
+
+2:19 PM:  SAP Import SQL File Cleared.
+2:19 PM:  Excel File Parsed.
+2:19 PM:  Data Imported into tblSAPImport SQL Table.
+
+2:19 PM:  SAP Import Process Completed.

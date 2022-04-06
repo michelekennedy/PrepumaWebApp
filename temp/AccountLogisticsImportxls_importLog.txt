@@ -1,0 +1,5 @@
+3:02 PM:  File AccountLogisticsImport.xls Selected.
+3:02 PM:  Import File Validated.
+3:02 PM:  Account Import SQL File Cleared.
+3:05 PM:  Error Encountered during Excel File Parse: Error Encountered on Cost Center  not numeric
+3:05 PM:  Processing Aborted.

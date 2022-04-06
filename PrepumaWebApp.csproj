@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4E61EAB-518C-46D6-BEDE-DDE88B3F0158}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrepumaWebApp</RootNamespace>
+    <AssemblyName>PrepumaWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\PIExpense\PIExpense\ReferenceDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Microsoft Visual Studio 12.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PI_Application, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Michele.Kennedy\Documents\Projects\PI_Application\PI_Application\bin\Debug\PI_Application.dll</HintPath>
+    </Reference>
+    <Reference Include="PI_ApplicationSecurity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PI_ApplicationSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="PI_BusinessClasses, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Michele.Kennedy\Documents\Projects\PI_BusinessClasses\PI_BusinessClasses\bin\Debug\PI_BusinessClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2015.3.930.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2015.1.401.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\..\..\Users\Jyothi.Sane\Documents\Visual Studio 2013\Projects\PI_GLBIWebApp\PI_GLBIWebApp\bin\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>..\..\..\Users\Jyothi.Sane\Documents\Visual Studio 2013\Projects\PI_GLBIWebApp\PI_GLBIWebApp\bin\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>..\..\..\Users\Jyothi.Sane\Documents\Visual Studio 2013\Projects\PI_GLBIWebApp\PI_GLBIWebApp\bin\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\..\..\Users\Jyothi.Sane\Documents\Visual Studio 2013\Projects\PI_GLBIWebApp\PI_GLBIWebApp\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Maths">
+      <HintPath>..\..\..\Users\Jyothi.Sane\Documents\Visual Studio 2013\Projects\PI_GLBIWebApp\PI_GLBIWebApp\bin\Telerik.Windows.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\..\..\Users\Jyothi.Sane\Documents\Visual Studio 2013\Projects\PI_GLBIWebApp\PI_GLBIWebApp\bin\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AccountCheck.aspx" />
+    <Content Include="AccountRealignment.aspx" />
+    <Content Include="Accounts.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="ClientInfoDetails.ascx" />
+    <Content Include="ClientLogDetail.aspx" />
+    <Content Include="Clients.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\PurolatorLogoInternational.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Contracts.aspx" />
+    <Content Include="ContractSearch.aspx" />
+    <Content Include="Customers.aspx" />
+    <Content Include="DashBoard.aspx" />
+    <Content Include="EditAccount.ascx" />
+    <Content Include="EditBusinessType.ascx" />
+    <Content Include="EditClient.ascx" />
+    <Content Include="EditContract.ascx" />
+    <Content Include="EditContractRenewal.ascx" />
+    <Content Include="EditCrossDocking.ascx" />
+    <Content Include="EditCustomer.ascx" />
+    <Content Include="EditFileUpload.ascx" />
+    <Content Include="EditGateway.ascx" />
+    <Content Include="EditMaterialHnlg.ascx" />
+    <Content Include="EditProductType.ascx" />
+    <Content Include="EditRegion.ascx" />
+    <Content Include="EditRenewalRouting.ascx" />
+    <Content Include="EditRenewalStatus.ascx" />
+    <Content Include="EditRenewalType.ascx" />
+    <Content Include="EditReturns.ascx" />
+    <Content Include="EditSalesRep.ascx" />
+    <Content Include="EditSalesRepTitle.ascx" />
+    <Content Include="EditSalesType.ascx" />
+    <Content Include="EditUser.ascx" />
+    <Content Include="Images\help-icon16.png" />
+    <Content Include="Images\logout-icon.png" />
+    <Content Include="Images\minus-icon.png" />
+    <Content Include="Images\plus-icon.png" />
+    <Content Include="Images\reload.png" />
+    <Content Include="ImportAccessorials.aspx" />
+    <Content Include="LoginStatus.ascx" />
+    <Content Include="LogisticsImport.aspx" />
+    <Content Include="MaintenanceBizType.aspx" />
+    <Content Include="MaintenanceCrossDock.aspx" />
+    <Content Include="MaintenanceGateway.aspx" />
+    <Content Include="MaintenanceMaterialHanlng.aspx" />
+    <Content Include="MaintenanceProductType.aspx" />
+    <Content Include="MaintenanceRegions.aspx" />
+    <Content Include="MaintenanceRenewalRouting.aspx" />
+    <Content Include="MaintenanceRenewalRoutingCC.aspx" />
+    <Content Include="MaintenanceRenewalStatus.aspx" />
+    <Content Include="MaintenanceRenewalType.aspx" />
+    <Content Include="MaintenanceReturns.aspx" />
+    <Content Include="MaintenanceSalesReps.aspx" />
+    <Content Include="MaintenanceSalesRepTitles.aspx" />
+    <Content Include="MaintenanceSalesType.aspx" />
+    <Content Include="MarginReport.aspx" />
+    <Content Include="QuarterEndAcctSave.aspx" />
+    <Content Include="ReferenceDLL\Antlr3.Runtime.dll" />
+    <Content Include="ReferenceDLL\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="ReferenceDLL\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="ReferenceDLL\Elmah.dll" />
+    <Content Include="ReferenceDLL\EntityFramework.dll" />
+    <Content Include="ReferenceDLL\EntityFramework.SqlServer.dll" />
+    <Content Include="ReferenceDLL\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="ReferenceDLL\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="ReferenceDLL\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="ReferenceDLL\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="ReferenceDLL\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="ReferenceDLL\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="ReferenceDLL\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="ReferenceDLL\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="ReferenceDLL\Newtonsoft.Json.dll" />
+    <Content Include="ReferenceDLL\Newtonsoft.Json.xml" />
+    <Content Include="ReferenceDLL\Owin.dll" />
+    <Content Include="ReferenceDLL\PI_Application.dll" />
+    <Content Include="ReferenceDLL\PI_ApplicationSecurity.dll" />
+    <Content Include="ReferenceDLL\PI_BusinessClasses.dll" />
+    <Content Include="ReferenceDLL\PrepumaWebApp.dll" />
+    <Content Include="ReferenceDLL\PrepumaWebApp.pdb" />
+    <Content Include="ReferenceDLL\System.Web.Optimization.dll" />
+    <Content Include="ReferenceDLL\System.Web.Providers.dll" />
+    <Content Include="ReferenceDLL\Telerik.Web.UI.dll" />
+    <Content Include="ReferenceDLL\Telerik.Web.UI.Skins.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Core.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Core.xml" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Flow.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Flow.xml" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Spreadsheet.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Documents.Spreadsheet.xml" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Maths.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Maths.xml" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Zip.dll" />
+    <Content Include="ReferenceDLL\Telerik.Windows.Zip.xml" />
+    <Content Include="ReferenceDLL\WebGrease.dll" />
+    <Content Include="RenewalSheet.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\AjaxLoading.gif" />
+    <Content Include="Images\Grid\AddRecord.gif" />
+    <Content Include="Images\Grid\Cancel.gif" />
+    <Content Include="Images\Grid\Delete.gif" />
+    <Content Include="Images\Grid\Edit.gif" />
+    <Content Include="Images\Grid\Filter.gif" />
+    <Content Include="Images\Grid\loading_small.gif" />
+    <Content Include="Images\Grid\MetroTouch.gif" />
+    <Content Include="Images\Grid\MoveDown.gif" />
+    <Content Include="Images\Grid\MoveUp.gif" />
+    <Content Include="Images\Grid\PagingFirst.gif" />
+    <Content Include="Images\Grid\PagingLast.gif" />
+    <Content Include="Images\Grid\PagingNext.gif" />
+    <Content Include="Images\Grid\PagingPrev.gif" />
+    <Content Include="Images\Grid\Refresh.gif" />
+    <Content Include="Images\Grid\rgDrag.gif" />
+    <Content Include="Images\Grid\SingleMinus.gif" />
+    <Content Include="Images\Grid\SinglePlus.gif" />
+    <Content Include="Images\Grid\SortAsc.gif" />
+    <Content Include="Images\Grid\SortDesc.gif" />
+    <Content Include="Images\Grid\Update.gif" />
+    <Content Include="Images\LoadingImage.png" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="App_Data\DAL\PrepumaData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PrepumaData.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\DAL\PumaSQL.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PumaSQL.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ReferenceDLL\PrepumaWebApp.dll.config" />
+    <Content Include="LoginMaster.Master" />
+    <Content Include="App_Data\DAL\PurolatorReportingSQL.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PurolatorReportingSQL1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ClientLogDataSet.xsc">
+      <DependentUpon>ClientLogDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ClientLogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClientLogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ClientLogDataSet.xss">
+      <DependentUpon>ClientLogDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="ClientLogDetails.xsc">
+      <DependentUpon>ClientLogDetails.xsd</DependentUpon>
+    </Content>
+    <None Include="ClientLogDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClientLogDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ClientLogDetails.xss">
+      <DependentUpon>ClientLogDetails.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="SearchContractRenewal.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="Styles.css" />
+    <Content Include="Styles\Grid.MetroTouch.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\Styles.css" />
+    <Content Include="Test.aspx" />
+    <Content Include="UnassignedAccounts.aspx" />
+    <Content Include="UserAuthentication.aspx" />
+    <Content Include="UserSecurity.aspx" />
+    <Content Include="View.aspx" />
+    <Content Include="ViewRenewal.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="ViewUserRoles.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="SiteWide.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCheck.aspx.cs">
+      <DependentUpon>AccountCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountCheck.aspx.designer.cs">
+      <DependentUpon>AccountCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRealignment.aspx.cs">
+      <DependentUpon>AccountRealignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountRealignment.aspx.designer.cs">
+      <DependentUpon>AccountRealignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts.aspx.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts.aspx.designer.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\ClsCustomer.cs" />
+    <Compile Include="App_Data\DAL\ClsSalesRepTitle.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ClientInfoDetails.ascx.cs">
+      <DependentUpon>ClientInfoDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientInfoDetails.ascx.designer.cs">
+      <DependentUpon>ClientInfoDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientLogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientLogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClientLogDetail.aspx.cs">
+      <DependentUpon>ClientLogDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientLogDetail.aspx.designer.cs">
+      <DependentUpon>ClientLogDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientLogDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientLogDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.aspx.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients.aspx.designer.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\ClsAlignmentImport.cs" />
+    <Compile Include="App_Data\DAL\ClsContractRenewal.cs" />
+    <Compile Include="App_Data\DAL\ClsContractRelationship.cs" />
+    <Compile Include="App_Data\DAL\ClsContractRenewalDetail.cs" />
+    <Compile Include="ClsEncryptDecrypt.cs" />
+    <Compile Include="App_Data\DAL\ClsRenewalStatus.cs" />
+    <Compile Include="App_Data\DAL\ClsRenewalType.cs" />
+    <Compile Include="App_Data\DAL\ClsRenewalRouting.cs" />
+    <Compile Include="App_Data\DAL\ClsRenewalNotes.cs" />
+    <Compile Include="App_Data\DAL\ClsSAPImport.cs" />
+    <Compile Include="App_Data\DAL\ClsFileUpload.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts.aspx.cs">
+      <DependentUpon>Contracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contracts.aspx.designer.cs">
+      <DependentUpon>Contracts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\AccountImport.cs" />
+    <Compile Include="App_Data\DAL\AccountImportCollection.cs" />
+    <Compile Include="App_Data\DAL\ClsAccount.cs" />
+    <Compile Include="App_Data\DAL\AccountClassification.cs" />
+    <Compile Include="App_Data\DAL\ClsAppUsers.cs" />
+    <Compile Include="App_Data\DAL\ClsBusinessType.cs" />
+    <Compile Include="App_Data\DAL\ClsCity.cs" />
+    <Compile Include="App_Data\DAL\ClsClient.cs" />
+    <Compile Include="App_Data\DAL\ClientInfo.cs" />
+    <Compile Include="App_Data\DAL\ClientInfoContext.cs" />
+    <Compile Include="App_Data\DAL\ClsContract.cs" />
+    <Compile Include="App_Data\DAL\ClsEncryptDecrypt.cs" />
+    <Compile Include="App_Data\DAL\ClsExceptionReport.cs" />
+    <Compile Include="App_Data\DAL\ClsGATEWAY.cs" />
+    <Compile Include="App_Data\DAL\ClsKeyValuePair.cs" />
+    <Compile Include="App_Data\DAL\ClsMATHANCPP.cs" />
+    <Compile Include="App_Data\DAL\ClsRegion.cs" />
+    <Compile Include="App_Data\DAL\ClsRelCrossDocMATRegion.cs" />
+    <Compile Include="App_Data\DAL\ClsRTNSCPP.cs" />
+    <Compile Include="App_Data\DAL\ClsSalesReps.cs" />
+    <Compile Include="App_Data\DAL\ClsSalesType.cs" />
+    <Compile Include="App_Data\DAL\ClsUserRoles.cs" />
+    <Compile Include="App_Data\DAL\ContractClassification.cs" />
+    <Compile Include="App_Data\DAL\ContractsByDistrict.cs" />
+    <Compile Include="App_Data\DAL\ClsCrossDockCPLB.cs" />
+    <Compile Include="App_Data\DAL\PrepumaData.cs">
+      <DependentUpon>PrepumaData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\PrepumaData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrepumaData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\ClsProductType.cs" />
+    <Compile Include="App_Data\DAL\PumaSQL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PumaSQL.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\PurolatorReportingSQL.designer.cs" />
+    <Compile Include="App_Data\DAL\PurolatorReportingSQL1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurolatorReportingSQL.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DAL\SalesRepsByDistrict.cs" />
+    <Compile Include="App_Data\DAL\UnassignedByDistrict.cs" />
+    <Compile Include="App_Data\DAL\UnassignedKnown.cs" />
+    <Compile Include="App_Data\DAL\UserInfo.cs" />
+    <Compile Include="ContractSearch.aspx.cs">
+      <DependentUpon>ContractSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractSearch.aspx.designer.cs">
+      <DependentUpon>ContractSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccount.ascx.cs">
+      <DependentUpon>EditAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditAccount.ascx.designer.cs">
+      <DependentUpon>EditAccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditBusinessType.ascx.cs">
+      <DependentUpon>EditBusinessType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditBusinessType.ascx.designer.cs">
+      <DependentUpon>EditBusinessType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditClient.ascx.cs">
+      <DependentUpon>EditClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditClient.ascx.designer.cs">
+      <DependentUpon>EditClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditContract.ascx.cs">
+      <DependentUpon>EditContract.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditContract.ascx.designer.cs">
+      <DependentUpon>EditContract.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditContractRenewal.ascx.cs">
+      <DependentUpon>EditContractRenewal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditContractRenewal.ascx.designer.cs">
+      <DependentUpon>EditContractRenewal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditCrossDocking.ascx.cs">
+      <DependentUpon>EditCrossDocking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCrossDocking.ascx.designer.cs">
+      <DependentUpon>EditCrossDocking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditCustomer.ascx.cs">
+      <DependentUpon>EditCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCustomer.ascx.designer.cs">
+      <DependentUpon>EditCustomer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditFileUpload.ascx.cs">
+      <DependentUpon>EditFileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditFileUpload.ascx.designer.cs">
+      <DependentUpon>EditFileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditGateway.ascx.cs">
+      <DependentUpon>EditGateway.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditGateway.ascx.designer.cs">
+      <DependentUpon>EditGateway.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMaterialHnlg.ascx.cs">
+      <DependentUpon>EditMaterialHnlg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMaterialHnlg.ascx.designer.cs">
+      <DependentUpon>EditMaterialHnlg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductType.ascx.cs">
+      <DependentUpon>EditProductType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProductType.ascx.designer.cs">
+      <DependentUpon>EditProductType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRegion.ascx.cs">
+      <DependentUpon>EditRegion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRegion.ascx.designer.cs">
+      <DependentUpon>EditRegion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRenewalRouting.ascx.cs">
+      <DependentUpon>EditRenewalRouting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRenewalRouting.ascx.designer.cs">
+      <DependentUpon>EditRenewalRouting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRenewalStatus.ascx.cs">
+      <DependentUpon>EditRenewalStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRenewalStatus.ascx.designer.cs">
+      <DependentUpon>EditRenewalStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRenewalType.ascx.cs">
+      <DependentUpon>EditRenewalType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRenewalType.ascx.designer.cs">
+      <DependentUpon>EditRenewalType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditReturns.ascx.cs">
+      <DependentUpon>EditReturns.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditReturns.ascx.designer.cs">
+      <DependentUpon>EditReturns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSalesRep.ascx.cs">
+      <DependentUpon>EditSalesRep.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditSalesRep.ascx.designer.cs">
+      <DependentUpon>EditSalesRep.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSalesRepTitle.ascx.cs">
+      <DependentUpon>EditSalesRepTitle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditSalesRepTitle.ascx.designer.cs">
+      <DependentUpon>EditSalesRepTitle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSalesType.ascx.cs">
+      <DependentUpon>EditSalesType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditSalesType.ascx.designer.cs">
+      <DependentUpon>EditSalesType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.ascx.cs">
+      <DependentUpon>EditUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditUser.ascx.designer.cs">
+      <DependentUpon>EditUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAccessorials.aspx.cs">
+      <DependentUpon>ImportAccessorials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportAccessorials.aspx.designer.cs">
+      <DependentUpon>ImportAccessorials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMaster.Master.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMaster.Master.designer.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginStatus.ascx.cs">
+      <DependentUpon>LoginStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginStatus.ascx.designer.cs">
+      <DependentUpon>LoginStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LogisticsImport.aspx.cs">
+      <DependentUpon>LogisticsImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogisticsImport.aspx.designer.cs">
+      <DependentUpon>LogisticsImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceBizType.aspx.cs">
+      <DependentUpon>MaintenanceBizType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceBizType.aspx.designer.cs">
+      <DependentUpon>MaintenanceBizType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceCrossDock.aspx.cs">
+      <DependentUpon>MaintenanceCrossDock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceCrossDock.aspx.designer.cs">
+      <DependentUpon>MaintenanceCrossDock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceGateway.aspx.cs">
+      <DependentUpon>MaintenanceGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceGateway.aspx.designer.cs">
+      <DependentUpon>MaintenanceGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceMaterialHanlng.aspx.cs">
+      <DependentUpon>MaintenanceMaterialHanlng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceMaterialHanlng.aspx.designer.cs">
+      <DependentUpon>MaintenanceMaterialHanlng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceProductType.aspx.cs">
+      <DependentUpon>MaintenanceProductType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceProductType.aspx.designer.cs">
+      <DependentUpon>MaintenanceProductType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRegions.aspx.cs">
+      <DependentUpon>MaintenanceRegions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRegions.aspx.designer.cs">
+      <DependentUpon>MaintenanceRegions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRenewalRouting.aspx.cs">
+      <DependentUpon>MaintenanceRenewalRouting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRenewalRouting.aspx.designer.cs">
+      <DependentUpon>MaintenanceRenewalRouting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRenewalRoutingCC.aspx.cs">
+      <DependentUpon>MaintenanceRenewalRoutingCC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRenewalRoutingCC.aspx.designer.cs">
+      <DependentUpon>MaintenanceRenewalRoutingCC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRenewalStatus.aspx.cs">
+      <DependentUpon>MaintenanceRenewalStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRenewalStatus.aspx.designer.cs">
+      <DependentUpon>MaintenanceRenewalStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRenewalType.aspx.cs">
+      <DependentUpon>MaintenanceRenewalType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRenewalType.aspx.designer.cs">
+      <DependentUpon>MaintenanceRenewalType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceReturns.aspx.cs">
+      <DependentUpon>MaintenanceReturns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceReturns.aspx.designer.cs">
+      <DependentUpon>MaintenanceReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceSalesReps.aspx.cs">
+      <DependentUpon>MaintenanceSalesReps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceSalesReps.aspx.designer.cs">
+      <DependentUpon>MaintenanceSalesReps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceSalesRepTitles.aspx.cs">
+      <DependentUpon>MaintenanceSalesRepTitles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceSalesRepTitles.aspx.designer.cs">
+      <DependentUpon>MaintenanceSalesRepTitles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceSalesType.aspx.cs">
+      <DependentUpon>MaintenanceSalesType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceSalesType.aspx.designer.cs">
+      <DependentUpon>MaintenanceSalesType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarginReport.aspx.cs">
+      <DependentUpon>MarginReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarginReport.aspx.designer.cs">
+      <DependentUpon>MarginReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuarterEndAcctSave.aspx.cs">
+      <DependentUpon>QuarterEndAcctSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuarterEndAcctSave.aspx.designer.cs">
+      <DependentUpon>QuarterEndAcctSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RenewalSheet.aspx.cs">
+      <DependentUpon>RenewalSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RenewalSheet.aspx.designer.cs">
+      <DependentUpon>RenewalSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchContractRenewal.aspx.cs">
+      <DependentUpon>SearchContractRenewal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchContractRenewal.aspx.designer.cs">
+      <DependentUpon>SearchContractRenewal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteWide.Master.cs">
+      <DependentUpon>SiteWide.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteWide.Master.designer.cs">
+      <DependentUpon>SiteWide.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnassignedAccounts.aspx.cs">
+      <DependentUpon>UnassignedAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnassignedAccounts.aspx.designer.cs">
+      <DependentUpon>UnassignedAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthentication.aspx.cs">
+      <DependentUpon>UserAuthentication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAuthentication.aspx.designer.cs">
+      <DependentUpon>UserAuthentication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSecurity.aspx.cs">
+      <DependentUpon>UserSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserSecurity.aspx.designer.cs">
+      <DependentUpon>UserSecurity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRenewal.aspx.cs">
+      <DependentUpon>ViewRenewal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRenewal.aspx.designer.cs">
+      <DependentUpon>ViewRenewal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUserRoles.aspx.cs">
+      <DependentUpon>ViewUserRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewUserRoles.aspx.designer.cs">
+      <DependentUpon>ViewUserRoles.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DynamicData\FieldTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClientLogDetail.rdlc" />
+    <None Include="App_Data\DAL\PrepumaData.dbml.layout">
+      <DependentUpon>PrepumaData.dbml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\DAL\PumaSQL.dbml.layout">
+      <DependentUpon>PumaSQL.dbml</DependentUpon>
+    </None>
+    <None Include="App_Data\DAL\PurolatorReportingSQL.dbml.layout">
+      <DependentUpon>PurolatorReportingSQL.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50784</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50784/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

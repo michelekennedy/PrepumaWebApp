@@ -1,0 +1,11 @@
+2:44 PM:  Realignment Import File:  RealignmentTest2.xlsx
+2:44 PM:  --- UPLOAD FILES ---
+2:44 PM:  Uploaded Relalignment File:  C:\PIDevelopmentArea2017\PrepumaWebApp\temp\RealignmentTest2.xlsx
+2:44 PM:  --- VALIDATE DATA TYPES ---
+2:44 PM:  Data File Data Validated
+2:44 PM:  --- CLEAR IMPORT TABLE ---
+2:44 PM:  Realignment Import SQL Table Cleared
+2:44 PM:  --- BEGIN DATA IMPORT ---
+2:44 PM:  Data Uploaded into Realignment Import SQL Table
+2:44 PM:  Data Successfully Imported to the Temp Tables.
+2:44 PM:  Realignment Data Import Process Completed!.

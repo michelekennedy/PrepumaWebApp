@@ -1,0 +1,11 @@
+2:41 PM:  Realignment Import File:  RealignmentTemplate 2019-01-03 Millipore.xlsx
+2:41 PM:  --- UPLOAD FILES ---
+2:41 PM:  Uploaded Relalignment File:  C:\PIDevelopmentArea2017\PrepumaWebApp\temp\RealignmentTemplate 2019-01-03 Millipore.xlsx
+2:41 PM:  --- VALIDATE DATA TYPES ---
+2:41 PM:  Data File Data Validated
+2:41 PM:  --- CLEAR IMPORT TABLE ---
+2:41 PM:  Realignment Import SQL Table Cleared
+2:41 PM:  --- BEGIN DATA IMPORT ---
+2:41 PM:  Data Uploaded into Realignment Import SQL Table
+2:41 PM:  Data Successfully Imported to the Temp Tables.
+2:41 PM:  Realignment Data Import Process Completed!.

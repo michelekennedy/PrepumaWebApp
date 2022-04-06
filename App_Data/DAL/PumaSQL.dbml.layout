@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PumaSQL">
+  <DataContextMoniker Name="/PumaSQLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="09f8d397-a932-4dba-a808-0123517c6f39" absoluteBounds="4.5, 3.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PumaSQLDataContext/tblSalesType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95f1ae56-cbff-43ac-b609-8ec707c2509b" absoluteBounds="4.515, 3.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca4f4244-99c0-4da6-bedf-0fcd34f878c1" absoluteBounds="8.75, 3.125, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/PumaSQLDataContext/tblSalesRep" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ff7dc45-3d14-45ea-85ae-4eae1c0b3587" absoluteBounds="8.765, 3.585, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,11 @@
+11:15 AM:  Realignment Import File:  RealignmentProdType.xlsx
+11:15 AM:  --- UPLOAD FILES ---
+11:15 AM:  Uploaded Relalignment File:  C:\PIDevelopmentArea2017\PrepumaWebApp\temp\RealignmentProdType.xlsx
+11:15 AM:  --- VALIDATE DATA TYPES ---
+11:15 AM:  Data File Data Validated
+11:15 AM:  --- CLEAR IMPORT TABLE ---
+11:15 AM:  Realignment Import SQL Table Cleared
+11:15 AM:  --- BEGIN DATA IMPORT ---
+11:15 AM:  Data Uploaded into Realignment Import SQL Table
+11:15 AM:  Data Successfully Imported to the Temp Tables.
+11:15 AM:  Realignment Data Import Process Completed!.

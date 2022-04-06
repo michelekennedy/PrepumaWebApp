@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PUMASQL" Class="PumaSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PI-DEV-SQL;Initial Catalog=PUMASQL;User ID=puroIT" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PUMASQLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblSalesType" Member="tblSalesTypes">
+    <Type Name="tblSalesType">
+      <Column Name="SalesType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SalesDescription" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Updatedby" Type="System.String" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="Createdby" Type="System.String" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSalesReps" Member="tblSalesReps">
+    <Type Name="tblSalesRep">
+      <Column Name="SalesRepID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SalesRep" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalesRepTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Threshold" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BusinessType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NSMID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DSM" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NewBizLine" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Updatedby" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Createdby" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StackReport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Hiredate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

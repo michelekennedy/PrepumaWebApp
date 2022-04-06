@@ -1,0 +1,51 @@
+﻿.RadGrid_ModernBrowsers 
+{ 
+    border-radius: 10px; 
+    overflow: hidden; 
+} 
+  
+div.RadGrid_MetroTouch td.rgPagerCell 
+{ 
+    border-left: 0; 
+} 
+  
+.RadGrid_Rounded 
+{ 
+    position: relative; 
+} 
+  
+.ltRounded, 
+.rtRounded, 
+.lbRounded, 
+.rbRounded 
+{ 
+    background: url(images/rounded_corners.png); 
+    position: absolute; 
+    width: 10px; 
+    height: 10px; 
+    top: -1px; 
+    left: -1px; 
+} 
+  
+.rtRounded 
+{ 
+    right: -1px; 
+    left: auto; 
+    background-position: -10px 0; 
+} 
+  
+.lbRounded 
+{ 
+    top: auto; 
+    bottom: -1px; 
+    background-position: 0 -10px; 
+} 
+  
+.rbRounded 
+{ 
+    top: auto; 
+    left: auto; 
+    right: -1px; 
+    bottom: -1px; 
+    background-position: -10px -10px; 
+} 

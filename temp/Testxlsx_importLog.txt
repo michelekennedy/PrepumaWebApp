@@ -1,0 +1,4 @@
+2:30 PM:  File Test.xlsx Selected.
+2:30 PM:  Import File Validated.
+2:30 PM:  Excel File Parsed.
+2:30 PM: 12  New Accounts Found.

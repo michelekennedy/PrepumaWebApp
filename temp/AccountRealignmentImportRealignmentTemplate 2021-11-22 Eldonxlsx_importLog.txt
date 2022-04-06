@@ -1,0 +1,5 @@
+4:35 PM:  Realignment Import File:  RealignmentTemplate 2021-11-22 Eldon.xlsx
+4:35 PM:  --- UPLOAD FILES ---
+4:36 PM:  Uploaded Relalignment File:  C:\PIDevelopmentArea\PrepumaWebApp\temp\RealignmentTemplate 2021-11-22 Eldon.xlsx
+4:36 PM:  --- VALIDATE DATA TYPES ---
+4:37 PM: Data Errors Found:  The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.

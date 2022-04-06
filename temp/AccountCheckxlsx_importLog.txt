@@ -1,0 +1,4 @@
+7:02 PM:  File AccountCheck.xlsx Selected.
+7:02 PM:  Import File Validated.
+7:03 PM:  Excel File Parsed.
+7:03 PM: 2  New Accounts Found.
